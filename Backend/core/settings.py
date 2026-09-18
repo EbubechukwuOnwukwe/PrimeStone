@@ -66,7 +66,7 @@ SESSION_COOKIE_SECURE = True
 # We are using Brevo's HTTP API directly via the Python SDK inside views.py
 # Native Django SMTP settings are no longer required.
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-EMAIL_HOST = str(os.environ.get('EMAIL_HOST', 'smtp.gmail.com')).strip()
+EMAIL_HOST = str(os.environ.get('EMAIL_HOST')).strip()
 EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
